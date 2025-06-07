@@ -137,7 +137,7 @@ Em nossa aplicação WEB vamos precisar criar um modal para criação dos pacote
 <p align="center" id="top">
     <img alt="Readme" title="Readme GIF" src="./assets/modal_pacote_create.png" />
 </p>
-
+<br/><br/>
 
 ## Resultado final após selecionar múltiplos pacotes
 
