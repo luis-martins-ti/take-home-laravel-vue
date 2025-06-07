@@ -183,6 +183,6 @@ Não preocupe em criar os dados de paciente e médico, você mockar esses dados 
 * Ser possível adicionar exames e pacotes a uma lista
 * Ser possível imprimir PDF de acordo com a lógica sugerida
 * Arquivos de migração construindo as tabelas necessárias
-* Design pattern aplicado a lógica
+* Design pattern aplicados à lógica
 * Rotas de API para as ações do sistema
 
