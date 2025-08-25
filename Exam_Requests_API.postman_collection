@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d41c9d39-f030-48dd-85f3-dd6acaa1bd95",
+		"name": "Exam Requests API",
+		"description": "Coleção para testar rotas de exam requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9765406"
+	},
+	"item": [
+		{
+			"name": "Criar Solicitação",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    {\n      \"exam_id\": 1,\n      \"laterality\": \"AO\",\n      \"comment\": \"Exame avulso\",\n      \"group\": \"Individual\"\n    },\n    {\n      \"exam_id\": 2,\n      \"laterality\": \"OD\",\n      \"comment\": \"Exame avulso 2\",\n      \"group\": \"Grupo 1\",\n      \"package_id\": 1\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/exam-requests/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"exam-requests",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Solicitações",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/exam-requests",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"exam-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pacotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/packages",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Exames",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/exams",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"exams"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "dolo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver detalhes da Solicitação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/exam-requests/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"exam-requests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gerar PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/exam-requests/1/print",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"exam-requests",
+						"1",
+						"print"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}

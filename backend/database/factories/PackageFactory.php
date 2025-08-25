@@ -1,0 +1,16 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class PackageFactory extends Factory
+{
+    public function definition()
+    {
+        return [
+            'name' => 'Pacote ' . $this->faker->word(),
+            'observations' => $this->faker->sentence(),
+        ];
+    }
+}
